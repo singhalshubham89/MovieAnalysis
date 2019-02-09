@@ -23,18 +23,21 @@ export class AppComponent  {
     rowData: any;
 
     color = 'accent';
-    checked = false;
-    disabled = false;
-
+    name= 'Light Theme';
     class_name="ag-theme-balham"
 
   
 
   changetheme(){
-    if(this.class_name=="ag-theme-balham")
+    if(this.class_name=="ag-theme-balham"){
       this.class_name="ag-theme-balham-dark";
-    else
-    this.class_name="ag-theme-balham";
+      this.name='Dark Theme'
+    }
+    else{
+      this.class_name="ag-theme-balham";
+      this.name= 'Light Theme';
+    }
+    
     
   }
 

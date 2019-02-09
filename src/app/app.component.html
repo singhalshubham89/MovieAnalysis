@@ -2,9 +2,8 @@
 <mat-slide-toggle (change)="changetheme($event)"
 class="example-margin"
 [color]="color"
-[checked]="checked"
 >
-Slide me!
+{{this.name}}
 </mat-slide-toggle>
 <div id="myGrid" [class]="class_name">
 <ag-grid-angular 
