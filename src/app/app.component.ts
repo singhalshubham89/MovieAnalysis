@@ -1,6 +1,8 @@
 import { Component, ViewChild  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AgGridNg2 } from 'ag-grid-angular'
+import { AgGridNg2 } from 'ag-grid-angular';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,11 +22,21 @@ export class AppComponent  {
     colResizeDefault:any;
     rowData: any;
 
-  
+    color = 'accent';
+    checked = false;
+    disabled = false;
+
+    class_name="ag-theme-balham"
 
   
 
-
+  changetheme(){
+    if(this.class_name=="ag-theme-balham")
+      this.class_name="ag-theme-balham-dark";
+    else
+    this.class_name="ag-theme-balham";
+    
+  }
 
   constructor( private http: HttpClient) {
 

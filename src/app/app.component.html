@@ -1,8 +1,17 @@
+
+<mat-slide-toggle (change)="changetheme($event)"
+class="example-margin"
+[color]="color"
+[checked]="checked"
+>
+Slide me!
+</mat-slide-toggle>
+<div id="myGrid" [class]="class_name">
 <ag-grid-angular 
     #agGrid
     id="myGrid"
     style="width: 1335px; height: 400px;" 
-    class="ag-theme-balham"
+    class="ag-theme-bootstra"
     [rowData]="rowData | async" 
     [columnDefs]="columnDefs"
     [pagination]="true"
@@ -12,3 +21,4 @@
     (gridReady)="onGridReady($event)"
     >
 </ag-grid-angular>
+</div>
