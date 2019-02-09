@@ -25,7 +25,6 @@ export class AppComponent  {
     color = 'accent';
     name= 'Light Theme';
     class_name="ag-theme-balham"
-
   
 
   changetheme(){
@@ -59,16 +58,28 @@ export class AppComponent  {
   
     ];
 
-    this.defaultColDef = { resizable: true,sortable: true, filter: "agTextColumnFilter",floatingFilter: true};
+    this.defaultColDef = { resizable: true,
+                          sortable: true, 
+                          filter: "agTextColumnFilter",
+                          floatingFilter: true,
+                          autoHeight: true
+                        };
   
     }
 
 
-  onGridReady(params) {
+    onColumnResized(event) {
+      if (event.finished) {
+        this.gridApi.resetRowHeights();
+      }
+    }
+
+  onGridReady(params:any) {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
 
     this.rowData=this.http.get("/movies");
+    
   }
   
 }
