@@ -38,3 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - **Sorting (Click on header to sort )** and **filtering (Floating filter(below the header) and contain filter(options on header to filter using not contain and contain) is enable )** option is enable .
  - **Pagination is enable** with 10 items visible and options to go back and forth with **arrow link as seen below on the grid**
  - ScreenShots:
+ 
+ ![alt text](https://github.com/singhalshubham89/MovieAnalysis/blob/master/assets/images/Light%20Theme.png)
+ 
+ ![alt text](https://github.com/singhalshubham89/MovieAnalysis/blob/master/assets/images/DarkTheme.PNG)
